@@ -1,21 +1,19 @@
 # AutoCluster
 
-**TODO: Add description**
+This is a simple application which uses Docker and Elixir to explore the Erlang VM cluster capabilities.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `autocluster` to your list of dependencies in `mix.exs`:
+I will assume you already have Docker, Docker Compose and Git installed, and your Linux user is a member of the `docker` group, being able to execute docker commands without `sudo`, ok?
 
-```elixir
-def deps do
-  [
-    {:autocluster, "~> 0.1.0"}
-  ]
-end
+```
+git clone https://github.com/wesleyit/elixir_docker_autocluster.git
+cd elixir_docker_autocluster
+mix compose full
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/autocluster](https://hexdocs.pm/autocluster).
+This will download the official Elixir container, build the application image and start 5 containers. To check out the containers output:
 
+``` 
+mix logs
+```
