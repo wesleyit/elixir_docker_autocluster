@@ -35,7 +35,10 @@ defmodule AutoCluster.Mixfile do
   end
 
   def compose do
-    Mix.shell.cmd("cd docker; docker-compose down; docker compose up --build")
+    Mix.shell.cmd("cd docker
+    docker-compose down
+    docker-compose build --force-rm --no-cache --pull
+    docker-compose up")
   end
 end
 
