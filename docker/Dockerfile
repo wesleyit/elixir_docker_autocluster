@@ -14,6 +14,7 @@ ENV PATH="/home/elixir/.mix:${PATH}"
 ## Get the app
 RUN git clone https://github.com/wesleyit/elixir_docker_autocluster.git
 WORKDIR /home/elixir/elixir_docker_autocluster
+RUN git checkout development
 
 ## Install rebar and hex
 RUN mix local.hex --force && \
