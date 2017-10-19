@@ -1,0 +1,12 @@
+version: '2'
+services:
+
+  app_node:
+    build: .
+    hostname: app_node
+    image: wesleyit/simple_cluster:0.1
+    networks:
+      - cluster
+
+networks:
+  cluster:

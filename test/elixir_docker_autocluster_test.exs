@@ -1,8 +1,8 @@
-defmodule ElixirDockerAutoclusterTest do
+defmodule AutoClusterTest do
   use ExUnit.Case
-  doctest ElixirDockerAutocluster
+  doctest AutoCluster
 
-  test "greets the world" do
-    assert ElixirDockerAutocluster.hello() == :world
+  test "The life is too short to write tests." do
+    assert 1 + 1 == 2
   end
 end
