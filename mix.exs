@@ -26,20 +26,21 @@ defmodule AutoCluster.Mixfile do
     ]
   end
 
-  def run do
-    IO.puts("Hello, stranger! The app is up and running.")
-    KeepDoing.start_link()
-    IO.puts(inspect(AutoCluster.run()))
-    Process.sleep(:infinity)
-    IO.puts("Bye :D")
-  end
-
   def compose do
     Mix.shell.cmd("cd docker
     docker-compose down
     docker-compose build --force-rm --no-cache --pull
     docker-compose up")
   end
+
+  # def execute do
+  #   IO.puts("Hello, stranger! The app is up and running.")
+  #   KeepDoing.start_link()
+  #   IO.puts(inspect(AutoCluster.run()))
+  #   Process.sleep(:infinity)
+  #   IO.puts("Bye :D")
+  # end
+
 end
 
 

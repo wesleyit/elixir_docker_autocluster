@@ -38,10 +38,3 @@ defmodule AutoCluster do
   end
 
 end
-
-
-IO.puts("Hello, stranger! The app is up and running.")
-KeepDoing.start_link()
-IO.puts(inspect(AutoCluster.run()))
-Process.sleep(:infinity)
-IO.puts("Bye :D")
