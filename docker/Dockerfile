@@ -22,4 +22,4 @@ RUN mix local.hex --force && \
 
 ## Start the main app
 ENV TERM=vt100
-CMD mix clusterize_as_hell
+CMD bash docker/start_app.sh
